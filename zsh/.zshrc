@@ -1,9 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/michelle/.oh-my-zsh
 
-ZSH_THEME="michelle"
+ZSH_THEME="amichelle"
 
-plugins=(git colored-man colorize github vagrant virtualenv pip python brew osx zsh-syntax-highlighting wd)
+plugins=(git colored-man colorize github zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -15,6 +15,14 @@ export PATH="/usr/local/sbin:$PATH"
 # Include Z
 . /usr/local/etc/profile.d/z.sh
 
+# Setting up thefuck
+eval $(thefuck --alias)
+
 # Alias'
 alias fishies='asciiquarium'
 alias zs='source ~/.zshrc'
+alias config='atom ~/Projects/my_config'
+
+
+# Personal greeting because why not
+cowsay -f dragon "Greetings, Michelle!" | lolcat
