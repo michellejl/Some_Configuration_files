@@ -5,16 +5,15 @@ export ZSH=/Users/michelle/.oh-my-zsh
 
 ZSH_THEME="amichelle"
 
-plugins=(git colored-man colorize github zsh-syntax-highlighting)
+plugins=(git colored-man colorize github zsh-syntax-highlighting brew)
 
 source $ZSH/oh-my-zsh.sh
 
-# This loads nvm
-export NVM_DIR="/Users/michelle/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-export PATH="/usr/local/sbin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Get all the variables and things from .bash_profile
+# Get all the variables and things from .bash_profilev (Mostly local things for work that I don't need to sync between computers)
 source ~/.bash_profile
 
 # Include Z
@@ -30,4 +29,7 @@ alias config='atom ~/Projects/my_config'
 
 
 # Personal greeting because why not
-cowsay -f dragon "Greetings, Michelle!" | lolcat
+cowsay -f dragon "Greetings, Human!" | lolcat
+
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
