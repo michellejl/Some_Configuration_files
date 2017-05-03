@@ -7,11 +7,18 @@ alias as 'fishies', this gives me entertainment and my daily dose of ascii-art!
 Provides the dragon greeting at the beginning of my terminal sessions. <br />
 Use ```cowsay -l``` to list all available art critters.
 
+## fortune
+Generates a random quote or "fortune". Sometimes I add this to my cowsay and lolcat pipes to give the critters things to say.
+<br />
+``` fortune | cowsay | lolcat ```
+
 ## gti
 Entertains me with a fast moving GTI car that zooms across my screen when I make a typo while trying to do a git command.
 
 ## lolcat
-Gives me fancy rainbow outputs. I often pipe this on the end of cowsay commands. ```cowsay -f dragon "Howdy" | lolcat```
+Gives me fancy rainbow outputs. I often pipe this on the end of cowsay commands.
+<br />
+```cowsay -f dragon "Howdy" | lolcat```
 
 ## sl
 Entertains me with a steam engine that moves across my screen when I make a typo while trying to list the files in the current location.
