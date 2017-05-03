@@ -4,6 +4,10 @@ Setting up a new computer for work, and trying to find a better way to sync my t
 
 # Included Files:
 
+## aText
+* **Data.atext** <br />
+  Settings and all my expandable text snippets from aText.
+
 ## iTerm2
 * **Colors Folder**
   * **ForTheFishies.itermcolors** <br />
@@ -31,5 +35,4 @@ Setting up a new computer for work, and trying to find a better way to sync my t
   Atom has a plugin that sets up and manages its own syncing. Might try to move it into this repo at some point just for the sake of having it all in one place.
 
 # Still need to add:
-* atext snippets
 * bettertouchtool settings
