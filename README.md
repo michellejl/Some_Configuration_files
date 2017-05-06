@@ -34,5 +34,7 @@ Setting up a new computer for work, and trying to find a better way to sync my t
 ## Atom
   Atom has a plugin that sets up and manages its own syncing. Might try to move it into this repo at some point just for the sake of having it all in one place.
 
+  Checkout this article for my font setup with atom: [atom fonts](https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e)
+
 # Still need to add:
 * bettertouchtool settings
