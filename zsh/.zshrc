@@ -5,7 +5,7 @@ export ZSH=/Users/michelle/.oh-my-zsh
 
 ZSH_THEME="amichelle"
 
-plugins=(git colored-man colorize github zsh-syntax-highlighting brew)
+plugins=(git colorize github zsh-syntax-highlighting brew)
 
 source $ZSH/oh-my-zsh.sh
 
