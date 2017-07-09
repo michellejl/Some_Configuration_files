@@ -5,7 +5,7 @@ export ZSH=/Users/michelle/.oh-my-zsh
 
 ZSH_THEME="amichelle"
 
-plugins=(git colorize github zsh-syntax-highlighting brew)
+plugins=(git colorize github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,7 +29,12 @@ alias config='atom ~/Projects/my_config'
 
 
 # Personal greeting because why not
-cowsay -f dragon "Greetings, Human!" | lolcat
+# cowsay -f dragon "Greetings, Human!" | lolcat
 
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Talk "slides"
+alias intro='figlet "How I got a Rainbow Dragon in my Terminal and Other Tricks" | lolcat'
+alias alt='figlet "or: How to Copy and Paste from Other Developers"'
