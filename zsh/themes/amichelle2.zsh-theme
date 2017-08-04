@@ -6,8 +6,26 @@
 # username --> %n
 # machine name --> %m
 
+function get_pwd(){
+  git_root=$PWD
+  while [[ $git_root != / && ! -e $git_root/.git ]]; do
+    git_root=$git_root:h
+  done
+  if [[ $git_root = / ]]; then
+    unset git_root
+    prompt_short_dir=%~
+  else
+    parent=${git_root%\/*}
+    prompt_short_dir=${PWD#$parent/}
+  fi
+  echo $prompt_short_dir
+}
+
+
+
+
 # Main prompt (left)
-PROMPT='╭─$(nvm_prompt_info) $fg[magenta]%~%b
+PROMPT='╭─$(nvm_prompt_info) $fg[magenta]$(get_pwd)%b
 ╰───$_SYMBOL'
 
 # Main prompt (right)

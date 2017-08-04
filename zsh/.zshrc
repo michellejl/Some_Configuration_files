@@ -3,7 +3,7 @@ export ZSH=/Users/michelle/.oh-my-zsh
 
 
 
-ZSH_THEME="amichelle"
+ZSH_THEME="amichelle2"
 
 plugins=(git colorize github)
 
@@ -26,6 +26,7 @@ eval $(thefuck --alias)
 alias fishies='asciiquarium'
 alias zs='source ~/.zshrc'
 alias config='atom ~/Projects/my_config'
+alias sshmjl='ssh dh_h9z9cm@ps583769.dreamhostps.com'
 
 
 # Personal greeting because why not
