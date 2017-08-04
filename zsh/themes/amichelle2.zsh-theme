@@ -2,27 +2,9 @@
 # BUILDING PROMPT #
 ###################
 
-
 # username --> %n
 # machine name --> %m
-
-function get_pwd(){
-  git_root=$PWD
-  while [[ $git_root != / && ! -e $git_root/.git ]]; do
-    git_root=$git_root:h
-  done
-  if [[ $git_root = / ]]; then
-    unset git_root
-    prompt_short_dir=%~
-  else
-    parent=${git_root%\/*}
-    prompt_short_dir=${PWD#$parent/}
-  fi
-  echo $prompt_short_dir
-}
-
-
-
+# current location --> %~
 
 # Main prompt (left)
 PROMPT='╭─$(nvm_prompt_info) $fg[magenta]$(get_pwd)%b
@@ -31,9 +13,9 @@ PROMPT='╭─$(nvm_prompt_info) $fg[magenta]$(get_pwd)%b
 # Main prompt (right)
 RPROMPT='$(check_git_prompt_info)'
 
-##################
-# GATHERING BITS #
-##################
+##############
+# EMOJI BITS #
+##############
 
 # Get more options here: http://getemoji.com/
 EMOJI=(👽 💀 🐦 🐷 🐻 🐼 🐨 🐯 🦁 🐮 🐶 🐸 🐧 🐳 🐌 🐓 🐢 🐍 🦄 🐙 🐠 🐘 🌍 🍄 🌻 👻 ⛄️ 🍭 🍌 🍍 ⛱ 📓 📚 📖 🎈 🖌 🖍 ✏️ 🎨 💬 💭 🗯 💩 🚀 ⛵️ 😎 😜 😝)
@@ -80,3 +62,23 @@ function check_git_prompt_info() {
 
 ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%}⬡ %{$fg[white]%}"
 ZSH_THEME_NVM_PROMPT_SUFFIX="%{$fg[white]%}"
+
+
+########################
+# Location Path Setter #
+########################
+
+function get_pwd(){
+  git_root=$PWD
+  while [[ $git_root != / && ! -e $git_root/.git ]]; do
+    git_root=$git_root:h
+  done
+  if [[ $git_root = / ]]; then
+    unset git_root
+    prompt_short_dir=%~
+  else
+    parent=${git_root%\/*}
+    prompt_short_dir=${PWD#$parent/}
+  fi
+  echo $prompt_short_dir
+}
